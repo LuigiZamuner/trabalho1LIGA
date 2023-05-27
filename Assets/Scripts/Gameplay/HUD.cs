@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UIElements;
 
@@ -10,11 +11,13 @@ public class HUD : MonoBehaviour
 {
     Timer endTimer;
 
-    float totalGameSeconds = 50;
+    float totalGameSeconds = 61;
 
     // timer support
     [SerializeField]
     TextMeshProUGUI timerText;
+
+
 
 
     // Start is called before the first frame update
@@ -34,13 +37,16 @@ public class HUD : MonoBehaviour
         {
             totalGameSeconds -= Time.deltaTime;
             timerText.text = Mathf.FloorToInt(totalGameSeconds).ToString();
+            if (totalGameSeconds < 16)
+            {
+                timerText.color = Color.red;
+            }
         }
 
         //se o tempo acabar o texto fica vermelho e indica que acabou o tempo
         if (endTimer.Finished)
         {
-            timerText.color= Color.red;
-            timerText.text = "ACABOU O TEMPO";
+            SceneManager.LoadScene("GameOver");
         }
 
     }

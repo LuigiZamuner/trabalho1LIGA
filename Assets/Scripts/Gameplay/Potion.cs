@@ -23,6 +23,7 @@ private void OnCollisionEnter(Collision collision)
 {
     if (collision.gameObject.CompareTag("Player"))
     {
+        GameManager.instance.click.Play();
         PotionSpawner potionSpawner = FindAnyObjectByType<PotionSpawner>();
         potionSpawner.RemovePotion(gameObject);
     }
