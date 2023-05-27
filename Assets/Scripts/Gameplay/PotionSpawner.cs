@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.LowLevel;
 using static UnityEditor.Progress;
 
@@ -15,8 +16,6 @@ public class PotionSpawner : MonoBehaviour
 
     [SerializeField]
     private GameObject[] potions;
-
-    public int points = 0;
 
     // Start is called before the first frame update
 
@@ -37,13 +36,17 @@ public class PotionSpawner : MonoBehaviour
    
     public void RemovePotion(GameObject potion)
     {
-        points++;
-        Debug.Log(points);
-        if (points == 4)
+        GameManager.instance.points++;
+        Debug.Log(GameManager.instance.points);
+        if (GameManager.instance.points == 4)
         {
             SpawnPandoraBox();
         }
         Destroy(potion);
+        if (GameManager.instance.points == 5)
+        {
+            SceneManager.LoadScene("Win");
+        }
     }
 
     public void SpawnPandoraBox()
