@@ -8,11 +8,6 @@ using UnityEngine.UIElements;
 
 public class HUD : MonoBehaviour
 {
-
-    [SerializeField]
-    TextMeshProUGUI scoreText;
-    int score = 0;
-
     Timer endTimer;
 
     float totalGameSeconds = 50;
