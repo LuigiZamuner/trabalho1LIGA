@@ -8,7 +8,6 @@ public class Move : MonoBehaviour
     public float mass = 0.5f;
     //Acessamos o componente Rigidbody através dessa variável
     private Rigidbody rigidbody;
-
     public float _velocidade = 20.0f;
     public float _girar = 60.0f;
 
