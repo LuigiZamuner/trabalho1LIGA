@@ -8,13 +8,13 @@ public class MainMenu : MonoBehaviour
 
     public void HandlePlayButtonOnClickEvent()
     {
-        GameManager.instance.menuIn.Play();
+        GameManager.instance.audioSource.PlayOneShot(GameManager.instance.audios[0]);
         SceneManager.LoadScene("Gameplay");
         
     }
     public void HandleQuitButtonOnClickEvent()
     {
-        GameManager.instance.menuOut.Play();
+        GameManager.instance.audioSource.PlayOneShot(GameManager.instance.audios[1]);
         Application.Quit();
     }
 }

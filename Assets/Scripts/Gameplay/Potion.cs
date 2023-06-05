@@ -5,27 +5,22 @@ using UnityEngine;
 
 public class Potion : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
-
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-   
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.instance.audioSource.PlayOneShot(GameManager.instance.audios[2]);
+            //achar o PotionSpawner para usar o medoto de remover pocao que contem nele
+            PotionSpawner.potionSpawner.RemovePotion(gameObject);
 
+        }
+    }
 
-    }
-private void OnCollisionEnter(Collision collision)
-{
-    if (collision.gameObject.CompareTag("Player"))
-    {
-        GameManager.instance.click.Play();
-        PotionSpawner potionSpawner = FindAnyObjectByType<PotionSpawner>();
-        potionSpawner.RemovePotion(gameObject);
-    }
-}
 }
