@@ -11,7 +11,7 @@ public class HUD : MonoBehaviour
 {
     Timer endTimer;
 
-    float totalGameSeconds = 61;
+    float totalGameSeconds = 56;
 
     // timer support
     [SerializeField]
