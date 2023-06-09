@@ -11,10 +11,12 @@ public class Move : MonoBehaviour
     private Rigidbody rigidbody;
     public float _velocidade = 20.0f;
     public float _girar = 60.0f;
+    Timer moveSoundTimer;
 
     // Start is called before the first frame update
     void Start()
     {
+
         anim = GetComponent<Animator>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
@@ -23,6 +25,7 @@ public class Move : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         //Definimos o valor da massa via script
         rigidbody.mass = mass;
+        GameManager.instance.audioSourceWalk.Play();
     }
 
     // Update is called once per frame
@@ -36,23 +39,17 @@ public class Move : MonoBehaviour
         if (translate > 0)
         {           
             anim.SetBool("IsMoving", true);
-            anim.SetBool("IsMovingBack", false);
         }
         else if (translate < 0)
         {           
-            anim.SetBool("IsMoving", false);
             anim.SetBool("IsMovingBack", true);
         }
         else
         {        
             anim.SetBool("IsMoving", false);
-            anim.SetBool("IsMovingBack", false);
+            anim.SetBool("IsMovingBack", false);  
         }
 
-        if(anim.GetBool("IsMoving") == false)
-        {
-            GameManager.instance.audioSourceWalk.Play();
-        }
     }
 
 }

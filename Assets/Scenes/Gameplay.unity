@@ -167,7 +167,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 0.5
   m_Range: 100
   m_SpotAngle: 134
   m_InnerSpotAngle: 21.80208
@@ -1157,7 +1157,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 3
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 117
   m_InnerSpotAngle: 21.80208
@@ -1282,7 +1282,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 0.5
   m_Range: 100
   m_SpotAngle: 134
   m_InnerSpotAngle: 21.80208
@@ -1595,7 +1595,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.7
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 117
   m_InnerSpotAngle: 21.80208
@@ -1770,6 +1770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978638141}
   - component: {fileID: 978638142}
+  - component: {fileID: 978638143}
   m_Layer: 0
   m_Name: Spot Light (13)
   m_TagString: Untagged
@@ -1804,7 +1805,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 3
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 117
   m_InnerSpotAngle: 21.80208
@@ -1854,6 +1855,22 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!111 &978638143
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978638140}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 82b7094362c52a3468885a208520af03, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 82b7094362c52a3468885a208520af03, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1007450273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,7 +2876,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.7
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 117
   m_InnerSpotAngle: 21.80208
@@ -2953,7 +2970,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 0.5
   m_Range: 100
   m_SpotAngle: 134
   m_InnerSpotAngle: 21.80208
@@ -3095,7 +3112,7 @@ Transform:
   m_GameObject: {fileID: 1913518383}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: -2.645299, y: 5.909782, z: -16.155695}
-  m_LocalScale: {x: 20, y: 1, z: 20}
+  m_LocalScale: {x: 20, y: 555, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1275840979}
